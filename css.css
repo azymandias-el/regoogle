@@ -1,13 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+html {
+    height: 100%
+}
+
+body {
+    font-family: 'DM Sans';
+    min-height: 100%;
+}
+
 div.account-bar > ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
     font-family: 'DM Sans';
+    top: 0;
 }
 
 div.account-bar > ul > li {
     display: inline;
     float: right;
     margin: 10px;
+}
+
+div.account-bar > ul > li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+div.center-content {
+    height: 30vh;
+    position: flex;
+    border: 3px solid green;
+}
+
+div.google {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
