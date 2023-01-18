@@ -46,14 +46,29 @@ div.search-bar {
     background-color: #e2e2e2;
     padding: 10px;
     border-radius: 5px;
+    display: flex;
 }
 
 div.search-bar > input {
     border: none;
     min-width: 400px;
     background-color: #e2e2e2;
+    min-height: 25px;
+    font-family: 'DM Sans';
+    font-size: 20px;
 }
 
 div.search-bar > input:focus {
     outline: none;
+}
+
+div.search-bar > div > svg {
+    height: 100%;
+    stroke: #000000;
+    transition: all 0.2s;   
+}
+
+div.search-bar > div > svg:hover {
+    stroke: #2d769d;
+    transition: all 0.2s;
 }
