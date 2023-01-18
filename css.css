@@ -40,6 +40,7 @@ div.google {
 
 div.google > p {
     font-size: 50px;
+    margin: 0px !important;
 }
 
 div.search-bar {
@@ -47,11 +48,12 @@ div.search-bar {
     padding: 10px;
     border-radius: 5px;
     display: flex;
+    min-width: 50vw;
 }
 
 div.search-bar > input {
     border: none;
-    min-width: 400px;
+    min-width: calc(100% - 30px);
     background-color: #e2e2e2;
     min-height: 25px;
     font-family: 'DM Sans';
@@ -71,4 +73,14 @@ div.search-bar > div > svg {
 div.search-bar > div > svg:hover {
     stroke: #2d769d;
     transition: all 0.2s;
+}
+
+@media (max-width: 768px) {
+    div.search-bar > input {
+        height: 10vw;
+    }
+
+    div.search-bar {
+        min-width: 90vw;
+    }
 }
