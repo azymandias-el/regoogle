@@ -34,8 +34,26 @@ div.google {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 0;
+    text-align: center;
 }
 
 div.google > p {
     font-size: 50px;
+}
+
+div.search-bar {
+    background-color: #e2e2e2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+div.search-bar > input {
+    border: none;
+    min-width: 400px;
+    background-color: #e2e2e2;
+}
+
+div.search-bar > input:focus {
+    outline: none;
 }
