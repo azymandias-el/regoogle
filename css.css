@@ -21,11 +21,13 @@ div.account-bar > ul > li {
     display: inline;
     float: right;
     margin: 10px;
+    transition: all 0.2s;
 }
 
 div.account-bar > ul > li:hover {
-    text-decoration: underline;
+    transform: scale(1.1, 1.1);
     cursor: pointer;
+    transition: all 0.2s;
 }
 
 div.google {
@@ -34,6 +36,7 @@ div.google {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     padding: 0;
     text-align: center;
 }
@@ -41,12 +44,20 @@ div.google {
 div.google > p {
     font-size: 50px;
     margin: 0px !important;
+    animation: google-grad 2s linear infinite;
+
+    /*Credit to hyperplexed for the amazing gradient animation!*/
+    background: linear-gradient(to right, #2f6ed4, #30ac9d, #2f6ed4);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }
 
 div.search-bar {
     background-color: #e2e2e2;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 50px;
     display: flex;
     min-width: 50vw;
 }
@@ -54,6 +65,7 @@ div.search-bar {
 div.search-bar > input {
     border: none;
     min-width: calc(100% - 30px);
+    margin-left: 5px;
     background-color: #e2e2e2;
     min-height: 25px;
     font-family: 'DM Sans';
@@ -67,12 +79,14 @@ div.search-bar > input:focus {
 div.search-bar > div > svg {
     height: 100%;
     stroke: #000000;
-    transition: all 0.2s;   
+    transition: all 0.2s; 
+    -webkit-transition: all 0.2s;  
 }
 
 div.search-bar > div > svg:hover {
     stroke: #2d769d;
     transition: all 0.2s;
+    -webkit-transition: all 0.2s;
 }
 
 @media (max-width: 768px) {
@@ -82,5 +96,34 @@ div.search-bar > div > svg:hover {
 
     div.search-bar {
         min-width: 90vw;
+    }
+}
+
+/*Animations:*/
+
+@keyframes google-grad {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes button {
+    0% {
+        border-left: solid #2d769d;
+    }
+    25% {
+        border-top: solid #2d769d;
+    }
+    50% {
+        border-right: solid #2d769d;
+    }
+    75% {
+        border-bottom: solid #2d769d;
+    }
+    100% {
+        border-left: solid #2d769d;
     }
 }
