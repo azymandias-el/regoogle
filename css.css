@@ -9,7 +9,7 @@ body {
     min-height: 100%;
 }
 
-div.account-bar > ul {
+div.account-bar > div > ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -17,17 +17,20 @@ div.account-bar > ul {
     top: 0;
 }
 
-div.account-bar > ul > li {
+div.account-bar > div > ul > li {
     display: inline;
     float: right;
     margin: 10px;
     transition: all 0.2s;
 }
 
-div.account-bar > ul > li:hover {
-    transform: scale(1.1, 1.1);
-    cursor: pointer;
-    transition: all 0.2s;
+li.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
 }
 
 div.google {
@@ -87,6 +90,12 @@ div.search-bar > div > svg:hover {
     stroke: #2d769d;
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
+}
+
+div.mail-popup {
+
+    background-color: #ffffff;
+    border: 1px solid #000000;
 }
 
 @media (max-width: 768px) {
